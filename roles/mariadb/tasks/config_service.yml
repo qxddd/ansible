@@ -1,0 +1,19 @@
+---
+- name: tests if the service file exist
+  shell: test -f /etc/init.d/mysqld
+  register: result
+  failed_when: "'FAILED' in result.stderr"
+
+- name: config service file
+  shell: cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysqld
+  register: cp_mysqld
+  when: result.rc != 0
+
+- name: add chkconfig list
+  shell: chkconfig --add mysqld
+
+- name: start
+  service:
+    name: mysqld
+    state: started
+    enabled: yes

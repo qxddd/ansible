@@ -1,0 +1,9 @@
+---
+- name: Determine whether the database is initialized
+  shell: ls /data/mysql/mysql
+  register: result
+  ignore_errors: True
+
+- name: initialization db
+  shell: /bin/bash /usr/local/mysql/scripts/mysql_install_db --datadir={{ data_dir }} --user=mysql
+  when: result.rc != 0

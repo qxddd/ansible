@@ -1,0 +1,7 @@
+---
+- name: unarchive mariadb package
+  unarchive:
+    src: "{{ mariadb_package_name }}"
+    dest: /usr/local
+    owner: root
+    group: root

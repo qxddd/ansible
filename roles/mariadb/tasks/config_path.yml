@@ -1,0 +1,8 @@
+---
+- name: config PATH
+  copy:
+    src: mysql.sh
+    dest: /etc/profile.d
+
+- name: source mysql PATH
+  shell: source /etc/profile.d/mysql.sh

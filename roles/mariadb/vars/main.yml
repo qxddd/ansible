@@ -1,0 +1,3 @@
+mariadb_package_name: mariadb-10.2.23-linux-x86_64.tar.gz
+unarchive_dir_name: mariadb-10.2.23-linux-x86_64
+data_dir: /data/mysql

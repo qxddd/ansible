@@ -1,0 +1,2 @@
+- name: groupadd
+  group: name=mysql gid=3306 system=yes

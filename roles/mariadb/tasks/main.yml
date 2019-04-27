@@ -1,0 +1,13 @@
+---
+# test
+- include: group.yml
+- include: user.yml
+- include: unarchive.yml
+- include: create_link.yml
+- include: config_path.yml
+- include: create_datadir.yml
+- include: install_dependency.yml
+- include: initialization_db.yml
+- include: create_conf.yml
+- include: config_service.yml
+- include: secure_installation.yml

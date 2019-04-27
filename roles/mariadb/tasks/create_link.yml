@@ -1,0 +1,6 @@
+---
+- name: create softlink
+  file:
+    state: link
+    src: /usr/local/{{ unarchive_dir_name }}
+    dest: /usr/local/mysql
